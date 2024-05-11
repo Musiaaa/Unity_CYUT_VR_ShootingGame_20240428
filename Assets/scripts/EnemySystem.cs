@@ -7,4 +7,9 @@ public class EnemySystem : MonoBehaviour
     private Transform playerPoint;
     [SerializeField, Header("導覽代理器")]
     private NavMeshAgent agent;
+
+    private void Update()
+    {
+        agent.SetDestination(playerPoint.position);
+    }
 }
